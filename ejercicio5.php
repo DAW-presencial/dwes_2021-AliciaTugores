@@ -27,21 +27,26 @@
 // __set() se ejecuta al escribir datos sobre propiedades inaccesibles (protegidas o privadas) o inexistentes.
 // __get() se utiliza para consultar datos a partir de propiedades inaccesibles (protegidas o privadas) o inexistentes.
 
-class A{
-    public $var1;
+class perro{
+    public $values = array(
+        "ladra" => "ladra",
+        "come" => "come",
+    );
 
-    public static function __set($an_array){
-        $obj = new A;
-        $obj->var1 = $an_array['var1']; 
-        return $obj;
+    public function __get($hola){
+        return $this->values[$hola];
+    }
+
+    public function __set($hola, $value){
+        $this->values[$hola] = $value;
     }
 }
 
-class B extends A {
+class pitbull extends perro{}
 
-}
-
-$b = new B;
-$b->var1 = 5;
+$test = new perro();
+echo($test->__get("ladra"). "<br>");
+$test2 = new pitbull();
+echo($test2->__get("come"));
 
 ?>
