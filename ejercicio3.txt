@@ -1,0 +1,9 @@
+Compilaciones de PHP de 32 bits:
+
+Los números enteros pueden ser de -2,147,483,648 a 2,147,483,647 (~ ± 2 mil millones)
+
+
+Compilaciones de PHP de 64 bits:
+
+Los números enteros pueden ser de -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 (~ ± 9 quintillones)
+
